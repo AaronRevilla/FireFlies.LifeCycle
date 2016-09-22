@@ -1,23 +1,19 @@
 package com.example.aaron.lifecycle;
 
 import android.content.Intent;
-import android.os.StrictMode;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
-
-    public static final String LOG_CAT = "AR   Activity 1 ----->";
+public class Main2Activity extends AppCompatActivity {
+    public static final String LOG_CAT = "AR   Activity 2 ----->";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        Log.d(LOG_CAT, "OnCreate");
+        setContentView(R.layout.activity_main2);
     }
 
     @Override
@@ -69,8 +65,7 @@ public class MainActivity extends AppCompatActivity {
         Log.d(LOG_CAT, "OnBackPressed");
     }
 
-    public void onGo(View view) {
-        Intent i = new Intent(this, Main2Activity.class);
-        startActivity(i);
+    public void goBack(View view) {
+        finish();
     }
 }
